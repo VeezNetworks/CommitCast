@@ -39,49 +39,6 @@ A high-performance, asynchronous Telegram bot built with **Pyrogram** and **Moto
 - **🔘 Interactive Dashboard (`/repos`)**:
   - Per-repository toggles for Commits, Issues & PRs, Releases, CI/CD Workflows, and Stars/Forks.
 
----
-
-## 📁 Project Architecture
-
-```
-CommitCast/
-├── app/
-│   ├── handlers/
-│   │   ├── bot_handlers.py             # General commands (/start, /help, channel management)
-│   │   ├── issue_cmd_handlers.py       # Issue & PR commands (/close, /reopen, /label)
-│   │   ├── release_handlers.py         # Changelog drafting and preview
-│   │   ├── repo_manager_handlers.py    # Repository control panel & toggles (/repos)
-│   │   ├── reply_handlers.py           # Reply-to-comment GitHub bridge
-│   │   └── keyboards.py                # Inline markup and rich button builder
-│   ├── services/
-│   │   ├── github_api.py               # GitHub REST API client
-│   │   ├── github_poller.py            # Polling loop for commits, issues, CI/CD, releases, stars
-│   │   └── webhook_server.py           # FastAPI webhook listener
-│   ├── core/
-│   │   ├── config.py                   # Pydantic environment configuration
-│   │   ├── logging_config.py           # Logging setup
-│   │   └── constants.py                # Application constants & emoji codes
-│   ├── database/
-│   │   ├── database.py                 # MongoDB AsyncIOMotorClient database manager
-│   │   └── repositories.py             # Repository data access abstractions
-│   └── utils/
-│       ├── changelog.py                # Natural changelog parsing & grouping
-│       ├── formatters.py               # Telegram HTML formatters & markdown converter
-│       └── validators.py               # Input validation routines
-├── scripts/
-│   └── verify_setup.py                 # Environment verification script
-├── data/                               # Local data files
-├── main.py                             # Application entry point
-├── .env.example                        # Example environment variables
-├── .gitignore                          # Secrets, sessions, and cache exclusion
-├── requirements.txt                    # Python dependencies
-├── Dockerfile                          # Container deployment definition
-├── docker-compose.yml                  # Multi-service container orchestration
-└── README.md                           # Documentation
-```
-
----
-
 ## 🛠️ Installation & Setup
 
 ### 1. Prerequisites
