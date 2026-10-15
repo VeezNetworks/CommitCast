@@ -1,0 +1,36 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Telegram Sessions & Credentials
+*.session
+*.session-journal
+*.session*
+
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Local Data and Logs
+data/*
+!data/.gitkeep
+logs/*
+*.log
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.bak
